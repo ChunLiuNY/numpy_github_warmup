@@ -23,7 +23,10 @@ def border_with_zeros(arr):
         ])
     '''
     # your code here!
-    pass
+    l, w = arr.shape
+    a = np.zeros((l+2, w+2))
+    a[1:-1,1:-1] = arr
+    return a
 
 if __name__ == '__main__':
     # Test your code here!
@@ -32,3 +35,4 @@ if __name__ == '__main__':
         [1,1]
     ])
     print(border_with_zeros(arr))
+
